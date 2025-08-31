@@ -41,7 +41,7 @@ function App() {
         </div>
         <div className="min-h-screen scroll-smooth flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 text-white px-4">
           <div className="bg-white text-gray-800 rounded-xl shadow-lg p-8 w-full max-w-sm text-center">
-            <h1 className="text-3xl font-bold mb-6">ReactJS Counter</h1>
+            <h1 className="text-3xl font-semibold mb-6">ReactJS Counter</h1>
             <div className="text-6xl font-medium mb-8"><span className='font-normal'>{result}</span></div>
             <div className="flex justify-center gap-6">
               <button

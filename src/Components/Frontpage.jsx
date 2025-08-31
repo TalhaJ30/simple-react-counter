@@ -7,7 +7,7 @@ function Frontpage() {
     <header className="bg-white shadow-md w-full scroll-smooth">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo / App Name */}
-        <h1 className="text-2xl font-bold mr-1.5 text-indigo-600 hover:text-indigo-800 transition-colors duration-300">
+        <h1 className="text-2xl font-semibold mr-1.5 text-indigo-600 hover:text-indigo-800 transition-colors duration-300">
           ⚡ React Counter
         </h1>
 
