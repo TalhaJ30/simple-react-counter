@@ -19,7 +19,7 @@ function Frontpage() {
           </Link>
           <Link  to='Score' smooth={true} duration={400}
               className="text-gray-700 scroll-smooth hover:text-indigo-600 font-medium transition-colors duration-300">
-              High score
+              Highscore
           </Link>
           
 
