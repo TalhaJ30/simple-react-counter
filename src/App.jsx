@@ -11,8 +11,17 @@ function App() {
 
   const plus = () => {
     setResult((result) => result + 1);
-    sethighscorevalue((para) => para + 1);
+    
+    if (result >= highscorevalue) {
+       console.log('hello')
+       sethighscorevalue((para) => para + 1);
+    }
+   else{
+     console.log('g')
+   }
   };
+
+
 
   const reset = () => {
     if (confirm(`you highest score is ${highscorevalue} and are you sure to reset you all the informations`)) {
