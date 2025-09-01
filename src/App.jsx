@@ -13,18 +13,35 @@ function App() {
     setResult((result) => result + 1);
     
     if (result >= highscorevalue) {
-       console.log('hello')
        sethighscorevalue((para) => para + 1);
     }
    else{
-     console.log('g')
+    
    }
+  
   };
 
+  useEffect(() => {
+    if (result >= 1000) {
+      setmessage('Great job! Your total count is looking strong 💪')
+    } else if (result >= 500) {
+      setmessage('Your score is looking strong 👌 , but you still need to improve it.')
+    } else if (result >= 100) {
+      setmessage('your score is looking good ❤️')
+    } else if (result >= 50) {
+      setmessage('your score is looking nice 🤩')
+    } else if (result >= 25) {
+      setmessage('your score is looking better ⭐')
+    }
+    else{
+      setmessage(`you score is ${result} please increase your score.`)
+    }
+  })  
 
+  const [message , setmessage] = useState('hello');
 
   const reset = () => {
-    if (confirm(`you highest score is ${highscorevalue} and are you sure to reset you all the informations`)) {
+    if (confirm(`you highest score is ${highscorevalue} and your new score is ${result} and are you sure to reset you all the informations`)) {
       setResult(0);
       sethighscorevalue(0);
     }
@@ -43,7 +60,7 @@ function App() {
   return (
 
     <>
-      <counterContext.Provider value={{ result, setResult }}>
+      <counterContext.Provider value={{ result, setResult , message }}>
         {/* this is the secondpage */}
         <div>
           <Frontpage />

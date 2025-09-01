@@ -19,7 +19,7 @@ function Secondpage() {
 
             <div className="bg-indigo-100 rounded-lg p-4">
               <p className="text-indigo-700 font-medium">
-                Great job! Your total count is looking strong 💪
+                {value.message}
               </p>
             </div>
           </div>
