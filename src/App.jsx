@@ -31,7 +31,9 @@ function App() {
     } else if (result >= 50) {
       setmessage('your score is looking nice 🤩')
     } else if (result >= 25) {
-      setmessage('your score is looking better ⭐')
+      setmessage('your score is looking great ⭐')
+    } else if (result >= 10) {
+      setmessage('your score is looking better 👍')
     }
     else{
       setmessage(`you score is ${result} please increase your score.`)
