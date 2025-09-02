@@ -20,6 +20,17 @@ function App() {
    }
   
   };
+ 
+  const resetbtn = () => {
+    if (confirm(`your counted value is ${result} and you sure to reset you value`)) {
+      setResult(0);    
+    }
+    else{
+
+    }
+  
+
+  }
 
   useEffect(() => {
     if (result >= 1000) {
@@ -43,7 +54,7 @@ function App() {
   const [message , setmessage] = useState('hello');
 
   const reset = () => {
-    if (confirm(`you highest score is ${highscorevalue} and your new score is ${result} and are you sure to reset you all the informations`)) {
+    if (confirm(`your highest score is ${highscorevalue} and your new score is ${result} and are you sure to reset your all the data`)) {
       setResult(0);
       sethighscorevalue(0);
     }
@@ -74,15 +85,23 @@ function App() {
             <div className="flex justify-center gap-6">
               <button
                 onClick={plus}
-                className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-1.5 px-5 rounded-lg transition-transform transform hover:scale-105 text-2xl active:scale-95"
+                className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-1.5 px-5 rounded-lg duration-200 transition-transform transform hover:scale-105 text-2xl active:scale-95"
               >
                 +
               </button>
               <button
                 onClick={minus}
-                className="bg-red-500 text-2xl hover:bg-red-600 text-white font-bold py-1.5 px-5 rounded-lg transition-transform transform hover:scale-105 active:scale-95"
+                className="bg-red-500 text-2xl hover:bg-red-600 text-white font-bold py-1.5 px-5 rounded-lg duration-200 transition-transform transform hover:scale-105 active:scale-95"
               >
                 -
+              </button>
+            </div>
+            <div className='mt-4'>
+            <button
+            onClick={resetbtn}
+                className=" hover:bg-indigo-400 lg:text-2xl text-xl border-2 border-indigo-500 hover:border-indigo-500 text-indigo-500 bg-white hover:text-white  duration-200 font-normal py-1.5 px-5 rounded-lg transition-transform transform hover:scale-105 active:scale-95"
+              >
+                Reset
               </button>
             </div>
 
